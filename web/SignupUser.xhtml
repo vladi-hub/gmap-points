@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        
+        <h:form id="signup">
+            <p:messages/>            
+            <h:outputLabel value="#{bundle.CreateSlUserLabel_email}"/>  
+            <p:inputText value="#{signupbean.email}" id="email" required="true" requiredMessage="#{bundle.EditSlUserRequiredMessage_email}"/>            
+            <br/>
+            <h:outputLabel value="#{bundle.CreateSlUserLabel_password}"/> 
+            <p:inputText value="#{signupbean.password}" id="password" required="true" requiredMessage="#{bundle.EditSlUserRequiredMessage_password}"/>
+            <br/>
+            <h:outputLabel value="#{bundle.CreateSlUserLabel_password}"/> 
+            <p:inputText value="#{signupbean.password2}" id="password2" required="true" requiredMessage="#{bundle.EditSlUserRequiredMessage_password}"/>
+            <br/>
+            <p:commandButton value="#{bundle.ViewSlUserCreateLink}" action="#{signupbean.signUp}"/> 
+        </h:form>
+        
+        <h:form id="login">
+            <p:messages/>            
+            <h:outputLabel value="#{bundle.CreateSlUserLabel_email}"/>  
+            <p:inputText value="#{signupbean.email}" id="email" required="true" requiredMessage="#{bundle.EditSlUserRequiredMessage_email}"/>            
+            <br/>
+            <h:outputLabel value="#{bundle.CreateSlUserLabel_password}"/> 
+            <p:inputText value="#{signupbean.password}" id="password" required="true" requiredMessage="#{bundle.EditSlUserRequiredMessage_password}"/>
+            <br/>
+            <p:commandButton value="#{bundle.LOGIN_BUTTON_MSG}" action="#{signupbean.login}"/> 
+        </h:form>
+    </h:body>
+</html>
+
